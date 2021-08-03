@@ -1,0 +1,22 @@
+type Category {
+  name: String
+  count: Int
+  children: [Category]
+}
+
+type BrandGroup {
+  name: String
+  count: Int
+  category1: String
+  category2: String
+}
+
+type Query {
+  category_all: [Category] @authUser
+
+  category_stage_all: [Category] @authUser
+
+  brandgroup_all(category1:String, category2:String): [BrandGroup] @authUser
+
+  brandgroup_stage_all(category1:String, category2:String): [BrandGroup] @authUser
+}

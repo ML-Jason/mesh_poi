@@ -1,0 +1,68 @@
+{
+  "name": "meshplus_poi",
+  "version": "1.0.0",
+  "description": "MeshPlus POI",
+  "scripts": {
+    "dev": "node server",
+    "stage": "cross-env NODE_ENV=production APP_ENV=stage node server",
+    "apidoc": "apidoc -i ./server/app/ -o ./public/doc/",
+    "test-crawler": "cross-env node ./script/test-crawler"
+  },
+  "author": "",
+  "license": "ISC",
+  "_moduleAliases": {
+    "~root": "./",
+    "~server": "server"
+  },
+  "apidoc": {
+    "name": "SKYLENS 2.0 Data2",
+    "version": "2.0.0",
+    "title": "SKYLENS 2.0 Data2",
+    "url": "https://skylens.meshplus.com.tw",
+    "header": {
+      "title": "header",
+      "filename": "./server/app/apidoc/header.md"
+    },
+    "footer": {
+      "title": "footer",
+      "filename": "./server/app/apidoc/footer.md"
+    },
+    "template": {
+      "withCompare": false
+    }
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.21.0",
+    "async": "^3.2.0",
+    "axios": "^0.21.1",
+    "body-parser": "^1.18.3",
+    "cheerio": "^1.0.0-rc.5",
+    "cookie-parser": "^1.4.3",
+    "cross-env": "^7.0.2",
+    "dataloader": "^2.0.0",
+    "dayjs": "^1.10.4",
+    "express": "^4.16.3",
+    "express-rate-limit": "^5.1.3",
+    "form-data": "^4.0.0",
+    "fs-extra": "^9.1.0",
+    "graphql": "^15.5.0",
+    "graphql-tools": "^7.0.4",
+    "helmet": "^4.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "log4js": "^6.3.0",
+    "module-alias": "^2.1.0",
+    "mongoose": "^5.11.17",
+    "nodemailer": "^6.4.17",
+    "pug": "^3.0.0",
+    "puppeteer": "^8.0.0",
+    "validator": "^13.1.1",
+    "xlsx": "^0.16.9"
+  },
+  "devDependencies": {
+    "apidoc": "^0.25.0",
+    "eslint": "^7.28.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.23.4"
+  }
+}

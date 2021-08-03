@@ -1,0 +1,15 @@
+{
+  "presets": [],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "~": "./src",
+          "~root": "./",
+          "~server": "./server"
+        }
+      }
+    ]
+  ]
+}

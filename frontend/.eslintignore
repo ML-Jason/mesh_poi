@@ -1,0 +1,8 @@
+dist
+.nuxt
+node_modules
+src/static
+src/css
+src/layouts
+apidoc
+!.eslintrc.js

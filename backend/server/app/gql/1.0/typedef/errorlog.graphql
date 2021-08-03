@@ -1,0 +1,22 @@
+type ErrLog {
+  errlog_id: String
+  title: String
+  message: String
+  created_at: TimeStamp
+}
+
+type ErrLogPagenate {
+  totalCount: Int
+  data: [ErrLog]
+},
+
+type Query {
+  """
+  系統的錯誤紀錄
+  """
+  errlog_list(offset: Int, limit: Int): ErrLogPagenate @authUser
+}
+
+type Mutation {
+  errlog_delete(errlog_id:String): String @authUser
+}

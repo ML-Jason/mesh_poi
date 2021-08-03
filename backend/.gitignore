@@ -1,0 +1,23 @@
+# dependencies
+node_modules
+
+# logs
+npm-debug.log
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+dist
+
+Thumbs.db
+.DS_Store
+
+# Server
+log
+
+# Docker images
+*.tar
+
+# test-crawler
+test-crawler-output.csv

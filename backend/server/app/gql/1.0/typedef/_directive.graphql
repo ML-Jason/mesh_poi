@@ -1,0 +1,3 @@
+directive @authUser on FIELD_DEFINITION
+directive @authSysAdmin on FIELD_DEFINITION
+directive @authSu on FIELD_DEFINITION

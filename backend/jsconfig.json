@@ -1,0 +1,15 @@
+{
+  "exclude": [
+    "node_modules",
+    "**/node_modules/*"
+  ],
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "paths": {
+      "~root/*": ["./*"],
+      "~server/*": ["./server/*"]
+    },
+    "checkJs": false
+  }
+}

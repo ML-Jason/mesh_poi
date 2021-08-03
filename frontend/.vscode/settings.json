@@ -1,0 +1,19 @@
+{
+  "files.eol": "\n",
+  "editor.tabSize": 2,
+  "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      { "language":"vue", "autoFix": true },
+      { "language": "html", "autoFix": true }
+  ],
+  "eslint.workingDirectories": [
+    "./"
+  ],
+  "javascript.validate.enable": false,
+  "typescript.validate.enable": false,
+  "typescript.format.enable": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}

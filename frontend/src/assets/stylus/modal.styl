@@ -1,0 +1,94 @@
+.modal
+  background-color rgba(0,0,0,.05)
+
+  &.show
+    display block
+
+  .modal-content
+    background-color #fff
+    border 1px solid #5F8EA8
+    border-radius 5px
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25)
+
+  .modal-body
+    max-height calc(100vh - 7rem);
+    overflow-y scroll
+    &::-webkit-scrollbar
+      width 5px
+    &::-webkit-scrollbar-track
+      -webkit-border-radius 10px
+      border-radius 10px
+      margin80px 0 5px 0
+    &::-webkit-scrollbar-thumb
+      -webkit-border-radius 4px
+      border-radius 4px
+      background rgb(219,219,219)
+    &.container-fluid
+      padding-left 15px
+      padding-right 15px
+
+  .modal-closebtn
+    &:focus
+      outline 0
+    background-color #EFEFEF
+    border-radius 5px
+    width 24px
+    height 24px
+    position absolute
+    top 5px
+    right 5px
+    color #777
+    cursor pointer
+    background-image url('~assets/image/cross.png')
+    background-position center center
+    background-size 50% 50%
+    background-repeat no-repeat
+    z-index 5
+
+  .row-title
+    font-size 1.428rem
+    padding-top 10px
+    &.small
+      font-size 1.14rem
+      padding-top 0
+  .attrlabel
+    font-size 1.14rem
+    font-weight bold
+    color #77250C
+
+  .input-group
+    .form-control
+      border 1px solid #92AAB7
+      color #92AAB7
+      border-right 0
+      border-radius 5px 0 0 5px
+      &::placeholder
+        color #92AAB7
+      &:focus
+        box-shadow 0 0 0 0 rgba(0,123,255,0);
+        z-index 0
+    button.btn
+      background-color #fff
+      border 1px solid #92AAB7
+      &.btn-x
+        border-left 0
+      i.fa-search
+        color #92AAB7
+      // img
+      //   height 1.2rem
+      //   // width 70%
+      //   // height 70%
+
+  .form-control.gray
+    background: #EFEFEF
+    border-radius 5px
+    border 0
+    &:focus
+      outline: none
+      border 0
+
+  textarea
+    width 100%
+    min-height 100px
+    resize none
+    overflow hidden

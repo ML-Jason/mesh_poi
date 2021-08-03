@@ -1,0 +1,29 @@
+.dropdown
+  .icon-button
+    font-size 1.5rem
+    color #777
+    cursor pointer
+.dropdown-menu
+  background-color #777777
+  border-radius 5px
+  border 0
+  min-width 90px
+  padding .5rem
+  a.dropdown-item:not([href])
+  .dropdown-item
+    color #fff
+    font-size 1rem
+    text-align center
+    cursor pointer
+    &:focus
+    &:active
+    &.active
+      outline 0
+      background-color #999999
+      // background-image: linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1))
+    &:hover
+      background-color #999999
+      background-image: linear-gradient(rgba(0,0,0,.01),rgba(0,0,0,.01))
+
+  .dropdown-divider
+    border-top: 1px solid #fff

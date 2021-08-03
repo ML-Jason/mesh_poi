@@ -1,0 +1,9 @@
+type User {
+  sky_id: String
+  email: String
+  access_token: String
+}
+
+type Query {
+  me: User @authUser
+}

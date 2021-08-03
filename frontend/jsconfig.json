@@ -1,0 +1,17 @@
+{
+  "exclude": [
+    "node_modules",
+    "**/node_modules/*",
+    ".nuxt"
+  ],
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"],
+      "~root/*": ["./*"],
+      "~server/*": ["./server/*"]
+    },
+    "checkJs": false
+  }
+}

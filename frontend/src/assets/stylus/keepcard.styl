@@ -1,0 +1,190 @@
+.keepcard
+  position: relative
+  // display: flex
+  // flex-direction column
+  // overflow hidden
+  // border: 0
+  // background: #fff
+  // border-radius: 5px
+  .keepcard-body
+    position: relative
+    display: flex
+    flex-direction column
+    overflow hidden
+    background: #fff
+    border-radius: 5px
+      
+  .bgimg-center-cover
+    width 100%
+    height 100%
+    background-size cover
+    background-position center
+    filter brightness(0.97)
+
+  .heart-badge
+    display flex
+    align-items center
+    padding 0 0.625rem //10px
+    font-size 0.75rem
+    border-radius 1rem
+    height 1.625rem //26px
+    color #fff
+    background-color #CB4426
+
+  .site-title
+    font-size 0.875rem  //14px
+    font-weight 500
+    padding .5rem
+    color #4F4F4F
+    background-color #EFEFEF
+    a
+      color #4F4F4F
+
+  .url-link
+    font-size 0.75rem //12px
+    padding 0.3125rem 0
+
+  hr
+    margin 0
+    height 1px
+    border 0
+    background-color #EAEAEA
+
+  .reactions
+    font-size 0.75rem
+    color #CC945C
+    // border-top 1px solid #EAEAEA
+    padding-top 0.3125rem
+    padding-bottom 0.3125rem
+
+  .author
+    padding-top 0.4375rem //7px
+    padding-bottom 0.4375rem
+    // border-top 1px solid #EAEAEA
+  .author-photo
+    width 36px
+    height 36px
+    border-radius 50%
+
+
+  &.box
+    border 2px solid rgba(0,0,0,0)
+    padding 2px
+    border-radius: 5px
+    .keepcard-body
+      box-shadow: 2px 2px 2px rgba(196,196,196,0.8)
+      &:hover
+        box-shadow 2px 2px 14px rgba(0,0,0,0.12), 1px 1px 4px rgba(0,0,0,0.24);
+    .keepcard-content
+      padding 0 0.625rem 0.625rem
+    .heart-badge
+      position absolute
+      top 5px
+      right 5px
+    .site-title
+      margin 0 -10px
+    .keepcard-img-top
+      height 100px
+      @media screen and (max-width:576px)
+        height 187px
+
+  &.simple
+    border 2px solid rgba(0,0,0,0)
+    padding 2px
+    border-radius: 5px
+    .keepcard-body
+      flex-direction row
+      border-bottom 1px solid #EAEAEA
+      padding 1rem
+    .keepcard-content
+      width calc(100% - 90px)
+      // display flex
+      // flex-direction column
+      padding-left 1rem
+    .keepcard-img-top
+      width 90px
+      height 90px
+      flex-shrink 0
+      border-radius 5px
+      overflow hidden
+    .site-title
+      background-color #fff
+      max-width 100%
+      padding 0
+      a
+        color #77250C
+    .url-link
+      margin-top 0
+      padding 0
+    .reactions
+      border-top 0
+      text-align right
+      padding-top 0
+    .heart-badge
+      float right
+
+  &.selectmode
+    border 2px solid #eee
+    .keepcard-body
+      box-shadow 0 0 0 rgba(0,0,0,0)
+    &.selected
+      border 2px solid #CC945C
+      
+  &.large
+    .keepcard-body
+      flex-direction row
+    .keepcard-img-top
+      width 233px
+      min-height 233px
+      border-radius 5px
+      overflow hidden
+      flex-shrink 0
+    .keepcard-content
+      width calc(100% - 233px)
+      display flex
+      flex-direction column
+      justify-content space-between
+      padding-left 1rem
+      padding-right 0
+    .site-title
+      font-weight bold
+      background-color #fff
+      padding 0
+    // .url-link
+    //   color #92AAB7
+    .site-description
+      font-size 0.75rem
+    .reactions
+      border 0
+    .heart-badge
+      display inline-flex
+      border-radius 5px
+      margin-right 0.714rem
+
+.tags
+  // padding 5px 0
+  margin 0 -5px
+
+.tag
+  display inline-flex
+  color #77250C
+  font-size 0.625rem
+  background-color #E9DEC8
+  border-radius 2px
+  padding .2rem .4rem
+  align-items center
+  margin 3px
+  // &:not(:first-child)
+  //   margin-left 5px
+
+.round-username
+  width 20px
+  height 20px
+  border-radius 50%
+  background-color #E9DEC8
+  color #fff
+  line-height 20px
+  text-align center
+  font-size 12px
+  margin 0 2px
+  display inline-block

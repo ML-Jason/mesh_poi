@@ -1,0 +1,85 @@
+type POI {
+  poi_id: String
+  cht_poiid: String
+  name: String
+  brand_group: String
+  category1: String
+  category2: String
+  address: String
+  phone: String
+  city: String
+  district: String
+  lat: Float
+  lon: Float
+  created_at: TimeStamp,
+}
+
+type LatLon {
+  address: String
+  lat: Float
+  lon: Float
+}
+
+type POIPagenate {
+  "資料總筆數"
+  totalCount: Int
+
+  "資料"
+  data: [POI]
+},
+
+input POIListFilter {
+  city: String
+  district: String
+  category1: String
+  category2: String
+  brand_group: [String]
+  keyword: String
+}
+
+input POIInput {
+  poi_id: String
+  name: String
+  brand_group: String
+  category1: String
+  category2: String
+  address: String
+  phone: String
+  lat: Float
+  lon: Float
+}
+
+type STDResponse {
+  status: String
+  message: String
+}
+
+type Query {
+  poi_list(offset:Int, limit:Int, filter:POIListFilter): POIPagenate @authUser
+
+  poi_by_ids(poi_ids:[String]):[POI] @authUser
+
+  stage_poi_list(offset:Int, limit:Int, filter:POIListFilter): POIPagenate @authUser
+
+  unstage_poi_list(offset:Int, limit:Int, filter:POIListFilter): POIPagenate @authUser
+
+  geocode(address:String):LatLon @authUser
+}
+
+type Mutation {
+  poi_create(poi:POIInput): POI @authUser
+
+  poi_update(poi:POIInput): POI @authUser
+
+  poi_delete(poi_id:String): String @authUser
+
+  poi_stage(poi:POIInput): POI @authUser
+
+  poi_stage_delete(poi_id:String): String @authUser
+
+  poi_unstage(poi_id:String): String @authUser
+
+  poi_unstage_delete(poi_id:String): String @authUser
+
+  poi_batch_create(pois:[POIInput]): [STDResponse] @authUser
+}

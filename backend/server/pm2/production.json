@@ -1,0 +1,17 @@
+{
+  "apps": [
+    {
+      "name": "MeshPlus_POI_prod:8011",
+      "script": "server/index.js",
+      "watch": false,
+      "exec_mode": "fork_mode",
+      "env": {
+        "NODE_ENV": "production",
+        "APP_ENV": "production"
+      },
+      "ignore_watch": [
+        "[\\/\\\\]\\./", "node_modules", "public", "log", "tmp", "server/log", "src", ".nuxt", ".git"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "name": "stores",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production APP_ENV=production nuxt generate",
+    "build-stage": "cross-env NODE_ENV=production APP_ENV=stage nuxt build",
+    "dev": "nuxt",
+    "stage": "cross-env NODE_ENV=production APP_ENV=stage node server",
+    "git_lf": "git config core.autocrlf false"
+  },
+  "author": "",
+  "license": "ISC",
+  "_moduleAliases": {
+    "~root": "./",
+    "~server": "server"
+  },
+  "dependencies": {
+    "@googlemaps/js-api-loader": "^1.12.1",
+    "@googlemaps/markerclustererplus": "^1.0.3",
+    "@nuxtjs/proxy": "^2.1.0",
+    "async": "^3.2.0",
+    "axios": "^0.21.0",
+    "cross-env": "^7.0.2",
+    "dayjs": "^1.10.4",
+    "nuxt": "^2.14.8",
+    "pug": "^3.0.0",
+    "sweetalert2": "^10.11.1",
+    "validator": "^13.5.1",
+    "xlsx": "^0.16.9"
+  },
+  "devDependencies": {
+    "eslint": "^7.14.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-vue": "^7.1.0",
+    "pug-plain-loader": "^1.0.0",
+    "stylus": "^0.54.8",
+    "stylus-loader": "^4.3.0"
+  }
+}

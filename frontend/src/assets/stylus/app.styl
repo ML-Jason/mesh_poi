@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,900|Roboto:300,400,500,900&display=swap')
+
+fontFamily = 'Microsoft JhengHei', 'Roboto', 'Noto Sans TC', Arial, sans-serif
+
+// @import 'button.styl'
+// @import 'keepcard.styl'
+// @import 'dropdown.styl'
+// @import 'modal.styl'
+// @import 'card.styl'
+@import 'scroller.styl'
+
+html, body
+  // font-size 14px
+  // font-family 'Roboto', 'Microsoft JhengHei', 'Noto Sans TC', Arial, sans-serif
+  font-family fontFamily
+  color #4F4F4F
+input
+input.form-control
+  &:focus
+    outline 0
+
+.fade-enter-active, .fade-leave-active
+  transition opacity .5s ease
+.fade-leave-active
+  display none
+.fade-enter, .fade-leave-to
+  opacity 0
+
+.router-fade-enter-active
+  transition opacity .3s ease
+.router-fade-leave-active
+  opacity 0
+  // transition opacity .1s ease
+.router-fade-enter, .router-fade-leave-to
+  opacity 0
+
+.cursor-pointer
+  cursor pointer
+
