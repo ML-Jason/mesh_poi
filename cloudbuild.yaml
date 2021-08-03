@@ -1,9 +1,9 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/$PROJECT_ID/meshplus-poi', '.']
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/meshplus-poi/dev', '.']
 # Push the container image to Container Registry
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/$PROJECT_ID/meshplus-poi']
+  args: ['push', 'gcr.io/$PROJECT_ID/meshplus-poi/dev']
 # Deploy container image to Cloud Run
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: bash
@@ -11,7 +11,7 @@ steps:
   - '-c'
   - |
     tag=$TAG_NAME
-    gcloud run deploy poi --image=gcr.io/$PROJECT_ID/meshplus-poi --region=asia-east1 --platform=managed --allow-unauthenticated
+    gcloud run deploy poi --image=gcr.io/$PROJECT_ID/meshplus-poi/dev --region=asia-east1 --platform=managed --allow-unauthenticated
     gcloud run services update-traffic poi --region=asia-east1 --to-latest
 images:
-- gcr.io/$PROJECT_ID/meshplus-poi'
+- gcr.io/$PROJECT_ID/meshplus-poi/dev'
