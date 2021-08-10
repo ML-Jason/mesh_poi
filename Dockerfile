@@ -2,6 +2,9 @@ FROM keymetrics/pm2:12-stretch
 # FROM node:12-stretch
 # EXPOSE 80
 
+# 宣告build時的外部參數
+ARG ENV
+
 RUN apt-get update
 RUN apt-get -y install vim
 
