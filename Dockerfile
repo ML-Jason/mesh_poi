@@ -23,4 +23,4 @@ RUN npm install
 # RUN npm run build
 RUN rm -rf /usr/src/app/frontend
 
-CMD pm2-runtime start server/pm2/production.json
+CMD pm2-runtime start server/pm2/${ENV}.json

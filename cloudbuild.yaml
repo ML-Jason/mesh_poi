@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/$PROJECT_ID/meshpluspoi', '.']
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/meshpluspoi', '--build-arg=ENV=production', '.']
 # Push the container image to Container Registry
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/$PROJECT_ID/meshpluspoi']
@@ -13,4 +13,4 @@ steps:
     gcloud run deploy poi --image=gcr.io/$PROJECT_ID/meshpluspoi --region=asia-east1 --platform=managed --allow-unauthenticated
     gcloud run services update-traffic poi --region=asia-east1 --to-latest
 # images:
-# - gcr.io/$PROJECT_ID/meshpluspoi'
+# - 'gcr.io/$PROJECT_ID/meshpluspoi'
