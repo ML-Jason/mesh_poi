@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/$PROJECT_ID/meshpluspoi', '--build-arg=ENV=production', '.']
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/meshpluspoi', '--build-arg', 'ENV=production', '.']
 # Push the container image to Container Registry
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/$PROJECT_ID/meshpluspoi']
